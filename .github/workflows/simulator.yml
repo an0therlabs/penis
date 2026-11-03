@@ -1,8 +1,6 @@
 name: simulator
 
 on:
-  push:
-    branches: ['claude/**']
   workflow_dispatch:
     inputs:
       api_id:
@@ -18,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: macos-latest
     timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
